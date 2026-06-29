@@ -43,6 +43,7 @@
     background:var(--paper);
     -webkit-font-smoothing:antialiased;
     line-height:1.5;
+    overflow-x:hidden;
   }
   h1,h2,h3,h4{font-family:var(--font-display);margin:0;line-height:1.08;letter-spacing:-.01em;font-weight:700}
   button{font-family:inherit;cursor:pointer}
@@ -64,7 +65,7 @@
   .pv-brand .wordmark img{height:26px;width:auto;display:block}
   .pv-brand .wordmark span{color:var(--gold)}
   .pv-tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(234,241,236,.55);font-weight:600}
-  .pv-tabs{display:flex;align-items:center;gap:4px;flex:1;overflow-x:auto;padding:8px 0;scrollbar-width:none;-ms-overflow-style:none}
+  .pv-tabs{display:flex;align-items:center;gap:4px;flex:1;min-width:0;overflow-x:auto;padding:8px 0;scrollbar-width:none;-ms-overflow-style:none}
   .pv-tabs::-webkit-scrollbar{display:none}
   .pv-group{display:flex;align-items:center;gap:4px}
   .pv-sep{width:1px;height:22px;background:rgba(255,255,255,.13);margin:0 8px;flex:none}
@@ -275,6 +276,45 @@
   .fdivider{margin:22px 0 16px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--font-display);font-weight:700;font-size:13.5px;color:var(--ink);display:flex;align-items:center;gap:8px}
   .fdivider svg{color:var(--muted)}
   .form-acts{display:flex;gap:10px;margin-top:6px}
+
+  /* ===== Mobile (phones) ===== */
+  @media(max-width:600px){
+    .pv-bar{gap:10px;padding:0 12px}
+    .pv-brand{padding-right:12px;gap:8px}
+    .pv-brand .wordmark img{height:22px}
+    .pv-note{display:none}
+
+    .pub-nav{padding:12px 16px;gap:12px}
+
+    .hero{padding:32px 18px 30px}
+    .hero h1,.hero p{max-width:100%}
+    .hero p{font-size:15px}
+
+    .catalog{padding:20px 16px 44px}
+    .grid{grid-template-columns:1fr;gap:14px}
+
+    .pdp{padding:16px 16px 48px}
+    .pdp-grid{gap:22px}
+    .pdp-info h1{font-size:24px}
+    .pdp-price{font-size:26px}
+    .pdp-buy{flex-wrap:wrap}
+    .pdp-buy .btn{flex:1}
+
+    .ws{padding:18px 16px 44px}
+    .ws-head{flex-direction:column;gap:12px}
+    .stat-grid{gap:12px}
+    .stat .num{font-size:22px}
+
+    .impact-banner{flex-direction:column;align-items:flex-start;gap:12px;padding:16px}
+
+    .form,.detail{padding:16px}
+    .row2{grid-template-columns:1fr}
+
+    /* tables scroll instead of being clipped by panel overflow */
+    .panel:has(> .tbl){overflow-x:auto}
+    .tbl{min-width:460px}
+    .tbl th,.tbl td{padding:11px 12px}
+  }
 
   @media (prefers-reduced-motion: reduce){
     *{animation:none!important;transition:none!important}
