@@ -101,6 +101,7 @@
   .pub-nav{display:flex;align-items:center;gap:18px;padding:16px 32px;background:var(--card);border-bottom:1px solid var(--line)}
   .pub-nav .logo{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:-.02em}
   .pub-nav .logo span{color:var(--gold-deep)}
+  .pub-nav .logo img{height:32px;width:auto;display:block}
   .pub-search{flex:1;max-width:440px;display:flex;align-items:center;gap:9px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px;color:var(--muted)}
   .pub-search input{border:0;background:transparent;outline:0;font:inherit;color:var(--ink);width:100%}
   .pub-nav .nav-act{margin-left:auto;display:flex;align-items:center;gap:18px;color:var(--muted)}
@@ -389,7 +390,7 @@ const Catalog = {
   template:`
   <div class="screen">
     <div class="pub-nav">
-      <div class="logo">Market<span>place</span></div>
+      <div class="logo"><img src="pnmlogo.png" alt="PNM Marketplace" /></div>
       <div class="pub-search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <input placeholder="Cari produk UMKM…" />
@@ -450,7 +451,7 @@ const ProductDetail = {
   template:`
   <div class="screen">
     <div class="pub-nav">
-      <div class="logo">Market<span>place</span></div>
+      <div class="logo"><img src="pnmlogo.png" alt="PNM Marketplace" /></div>
       <div class="pub-search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <input placeholder="Cari produk UMKM…" />
