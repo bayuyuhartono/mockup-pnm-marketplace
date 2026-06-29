@@ -59,7 +59,8 @@
     box-shadow:0 1px 0 rgba(0,0,0,.15);
   }
   .pv-brand{display:flex;align-items:center;gap:10px;padding-right:18px;border-right:1px solid rgba(255,255,255,.14)}
-  .pv-brand .wordmark{font-family:var(--font-display);font-weight:800;font-size:19px;letter-spacing:-.02em;color:#fff}
+  .pv-brand .wordmark{font-family:var(--font-display);font-weight:800;font-size:19px;letter-spacing:-.02em;color:#fff;display:flex;align-items:center}
+  .pv-brand .wordmark img{height:26px;width:auto;display:block}
   .pv-brand .wordmark span{color:var(--gold)}
   .pv-tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(234,241,236,.55);font-weight:600}
   .pv-tabs{display:flex;align-items:center;gap:4px;flex:1;overflow-x:auto;padding:8px 0;scrollbar-width:none;-ms-overflow-style:none}
@@ -283,7 +284,7 @@
 <div id="app">
   <header class="pv-bar">
     <div class="pv-brand">
-      <span class="wordmark">Market<span>place</span></span>
+      <span class="wordmark"><img src="pnmlogo.png" alt="PNM Marketplace" /></span>
     </div>
     <nav class="pv-tabs">
       <span class="pv-eyebrow">Pembeli</span>
@@ -390,7 +391,6 @@ const Catalog = {
   template:`
   <div class="screen">
     <div class="pub-nav">
-      <div class="logo"><img src="pnmblue.avif" alt="PNM Marketplace" /></div>
       <div class="pub-search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <input placeholder="Cari produk UMKM…" />
@@ -451,7 +451,6 @@ const ProductDetail = {
   template:`
   <div class="screen">
     <div class="pub-nav">
-      <div class="logo"><img src="pnmblue.avif" alt="PNM Marketplace" /></div>
       <div class="pub-search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <input placeholder="Cari produk UMKM…" />
